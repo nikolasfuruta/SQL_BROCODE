@@ -203,3 +203,40 @@
     FOREIGN KEY([ID_A]) REFERENCES [TABLE_A_NAME]([ID_A]);
 
   ```
+
+## LOGICAL OPERATORS
+
+- AND - both conditions must be true;
+
+```text
+select * from employees
+where hire_date < "2023-01-05" AND job = "cook";
+```
+
+- OR - only one condition must be true;
+
+```text
+select * from employees
+where job = "cashier" OR job = "cook";
+```
+
+- NOT - reverses the condition ;
+
+```text
+select * from employees
+where NOT job = "manager";
+```
+
+- BETWEEN - period;
+
+```text
+select * from employees
+where hire_date BETWEEN "2023-01-04" AND "2023-01-07";
+```
+
+- IN - returns a values if it is in an 'array';
+
+```text
+select * from employees
+where job IN ("cook","cashier","janitor");
+```
