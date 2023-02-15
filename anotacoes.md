@@ -240,3 +240,25 @@ where hire_date BETWEEN "2023-01-04" AND "2023-01-07";
 select * from employees
 where job IN ("cook","cashier","janitor");
 ```
+
+## WILD CARDS
+
+- % - more than one
+  
+  ```text
+  SELECT * FROM [TABLE_NAME]
+  WHERE [ATTR_NAME] LIKE "aba%"
+
+  SELECT * FROM [TABLE_NAME]
+  WHERE [ATTR_NAME] LIKE "%cate"
+  ```
+
+- _ - one single random character
+  
+  ```text
+  SELECT * FROM [TABLE_NAME]
+  WHERE [ATTR_NAME] LIKE "_ook"
+
+  SELECT * FROM [TABLE_NAME]
+  WHERE [ATTR_NAME] LIKE "_as%"
+  ```
